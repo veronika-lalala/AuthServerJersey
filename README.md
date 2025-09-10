@@ -1,1 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/XbGlhUuy)
+# AuthServerJersey
+HTTP REST API сервер с системой аутентификации
+_______
+## API
+
+### Аутентификация
+- **POST /auth/register** - регистрация нового пользователя
+  - Body: `{"username": "string", "password": "string"}`
+  - Success (201): `{"token": "string"}`
+  - Error (400/409): `{"error": "string"}`
+
+- **POST /auth/login** - вход пользователя
+  - Body: `{"username": "string", "password": "string"}`
+  - Success (200): `{"token": "string"}`
+  - Error (400/401): `{"error": "string"}`
